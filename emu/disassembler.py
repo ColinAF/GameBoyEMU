@@ -1,10 +1,13 @@
-"""
-@package emu
+"""@package emu
 Author: Colin Frisch
 File: disassembler.py
-
+Purpose: This module will open and disassemble the GB ROM
 """
 
-def main():
-    """ main is a placeholder for now """
+def loadROM():
+    """ Open the ROM file """
+    pass
+
+def parseROM():
+    """ Parse ROM's machine code into opcodes """
     pass
