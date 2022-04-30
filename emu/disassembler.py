@@ -1,4 +1,4 @@
-"""@package emu
+"""
 Author: Colin Frisch
 File: disassembler.py
 Purpose: This module will open and disassemble the GB ROM
