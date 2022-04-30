@@ -6,11 +6,11 @@ Purpose: This module will open and disassemble the GB ROM
 
 import sys
 
-def loadROM():
+def load_rom():
     """ Open the ROM file """
     pass
 
-def parseROM():
+def parse_rom():
     """ Parse ROM's machine code into opcodes """
     pass
 
