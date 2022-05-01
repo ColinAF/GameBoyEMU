@@ -4,8 +4,7 @@ File: disassembler.py
 Purpose: This module will open and disassemble the GB ROM
 """
 import struct
-
-from matplotlib.pyplot import title
+import json
 
 ROMS_PATH = "../ROMS/"
 ROM_NAME = ROMS_PATH + "snake.gb" # Make name a command line arg
@@ -25,11 +24,13 @@ def load_rom():
 
 def parse_rom():
     """ Parse ROM's machine code into opcodes """
-    pass
+    with open("../Opcodes.json") as opcodes_file:
+        opcodes = json.load(opcodes_file)
+        print(opcodes["unprefixed"]["0x00"])
 
 def disassemble():
     """ Load in a ROM file and disassemble it """ 
-    load_rom()
-
+    #load_rom()
+    parse_rom()
 
 disassemble()
