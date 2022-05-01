@@ -20,7 +20,8 @@ def load_rom():
     header = rom[HEADER_START:HEADER_END]
     title = struct.unpack_from('>15s', header[0x0034:0x0043])
     print(title)
-    
+
+    #return data and header
 
 def parse_rom():
     """ Parse ROM's machine code into opcodes """
@@ -30,7 +31,7 @@ def parse_rom():
 
 def disassemble():
     """ Load in a ROM file and disassemble it """ 
-    #load_rom()
+    load_rom()
     parse_rom()
 
 disassemble()
