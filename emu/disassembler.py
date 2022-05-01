@@ -14,10 +14,10 @@ HEADER_END = 0x014F
 
 def load_rom():
     """ Open the ROM file and break into sections """
-    with open(ROM_NAME, "rb") as rom:
-        data = rom.read()
+    with open(ROM_NAME, "rb") as rom_file:
+        rom = rom_file.read()
     
-    header = data[HEADER_START:HEADER_END]
+    header = rom[HEADER_START:HEADER_END]
     title = struct.unpack_from('>15s', header[0x0034:0x0043])
     print(title)
     
